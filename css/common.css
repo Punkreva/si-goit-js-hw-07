@@ -13,8 +13,12 @@ body {
   line-height: 1.5;
 }
 
-.gallery {
+ul,
+ol {
   list-style-type: none;
+}
+
+.gallery {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
