@@ -1,8 +1,9 @@
-const textInput = document.querySelector("#name-input");
+const inputName = document.querySelector("#name-input");
+const outputName = document.querySelector("#name-output");
 
-const output = document.querySelector("#name-output");
+const changeOutputName = (event) => {
+   let trimValue = event.currentTarget.value.trim();
+    outputName.textContent = trimValue.length > 0 ? trimValue : "Anonymous";
+};
 
-textInput.addEventListener("input", (event) => {
-    let trimmedValue = event.currentTarget.value.trim();
-     output.textContent = trimmedValue.length > 0 ? trimmedValue : "Anonymous";
- });
+inputName.addEventListener("input", changeOutputName);

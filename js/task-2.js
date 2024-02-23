@@ -28,8 +28,14 @@ const images = [
   },
 ];
 
-const list = document.querySelector(".gallery");
-const listItem = images
-  .map(image => `<li class = "list-item"><img src = "${image.url}" alt = "${image.alt}" width = "150" height = "100"/></li>`)
-  .join("");
-list.insertAdjacentHTML("afterbegin", listItem);
+const listGallery = document.querySelector(".gallery");
+// listGallery.style.listStyleType = "none";
+// listGallery.style.display = "flex";
+// listGallery.style.gap = "24px";
+// listGallery.style.flexWrap = "wrap";
+// listGallery.style.justifyContent = "center";
+const listItemGallery = images
+   .map(image => `<li class = "gallery-list-item"><img src = "${image.url}" alt = "${image.alt}" width = "150" heigth = "100"></img></li>`)
+   .join("");
+listGallery.insertAdjacentHTML(`afterbegin`, listItemGallery)
+console.log(listItemGallery);
